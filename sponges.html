@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OHM sponges — Matthew Bodony</title>
+<meta name="description" content="High-speed optical microscopy and machine-learning segmentation of oil uptake in engineered sponges.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Matthew Bodony</a>
+    <nav class="site">
+      <a href="index.html#work">Work</a>
+      <a href="https://github.com/MatthewBodony">GitHub</a>
+      <a href="mailto:matthewbodony2029@u.northwestern.edu">Email</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <a class="back" href="index.html">&larr; All work</a>
+
+  <div class="proj-head">
+    <h1>High-speed imaging of oil uptake in OHM sponges</h1>
+    <p class="meta">Dravid Group, NUANCE &middot; Northwestern University &middot; Undergraduate Researcher &middot; October 2025&ndash;present</p>
+    <div class="tags">
+      <span class="tag">High-speed imaging</span>
+      <span class="tag">SEM</span>
+      <span class="tag">TEM</span>
+      <span class="tag">Image segmentation</span>
+      <span class="tag">Python</span>
+    </div>
+  </div>
+
+  <section class="block">
+    <h2>Problem</h2>
+    <p>Oleophilic&ndash;hydrophobic multifunctional (OHM) sponges are engineered to pull oil and heavy metals out of water, and their performance is usually reported as a single number: how much a sample takes up, weighed before and after. That measurement says nothing about <em>how</em> uptake happens — how fast the droplet spreads, how the front advances into the pore network, or how those dynamics change with formulation. The interesting physics is in a window of tens of milliseconds, and it is invisible to a scale.</p>
+  </section>
+
+  <figure>
+    <img src="assets/sponge-pores.jpg" alt="Optical micrograph showing the polyhedral pore network of a sponge">
+    <figcaption>Pore network of a sectioned sponge under optical microscopy. Samples are cut thin enough to transmit light while still allowing fluid to flow, so that uptake can be observed inside the material rather than only at its surface.</figcaption>
+  </figure>
+
+  <section class="block">
+    <h2>Approach</h2>
+    <p>I image droplet contact and uptake with a high-speed camera through an optical microscope, and pair that with gravimetric bulk adsorption measurements across 25 sponge formulations. The imaging captures contact time, spreading diameter, and the advance of the absorption front; the gravimetric data anchors those dynamics to total capacity.</p>
+    <p>Scoring video frames by eye is slow and subjective, so the frames are segmented with a trained machine-learning model that extracts the front position automatically, turning a recording into a time series without a person marking boundaries. Pore structure is characterized separately by SEM and TEM, so that measured uptake dynamics can be correlated against the morphology that produces them.</p>
+  </section>
+
+  <figure>
+    <img src="assets/sponge-droplet.jpg" alt="Motor oil droplet suspended above a sponge surface">
+    <figcaption>Motor-oil droplet immediately before contact, imaged on a Phantom high-speed camera.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="assets/sponge-highspeed.jpg" alt="High-speed frame of an oil droplet spreading on a sponge surface, with acquisition metadata overlaid">
+    <figcaption>Uptake in progress, 103&nbsp;ms after contact. Acquisition metadata is burned into the frame: 1,731&nbsp;fps, 576&nbsp;&micro;s exposure, 7.3&nbsp;mm horizontal field of view. Frame rate is selected per run against the timescale of the event being resolved.</figcaption>
+  </figure>
+
+  <section class="block">
+    <h2>My role</h2>
+    <p>I work on the sponge absorption study within a group project: sample preparation and sectioning, the high-speed imaging setup, gravimetric measurements, and electron microscopy of pore structure. The segmentation and acceleration work is shared across the team.</p>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    Matthew Bodony &middot; Northwestern University &middot;
+    <a href="mailto:matthewbodony2029@u.northwestern.edu">email</a> &middot;
+    <a href="https://github.com/MatthewBodony">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
